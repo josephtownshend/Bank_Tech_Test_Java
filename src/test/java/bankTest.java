@@ -9,4 +9,10 @@ public class bankTest {
         new Bank();
     }
 
+    @Test
+    public void canDepositFunds() {
+        Bank bank = new Bank();
+        bank.deposit(0);
+    }
+
 }
