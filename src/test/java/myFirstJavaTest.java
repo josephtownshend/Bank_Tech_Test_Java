@@ -7,5 +7,9 @@ public class myFirstJavaTest {
     public void ATestMethod() {
         Assert.assertTrue(true);
     }
+    @Test
+    public void AnotherTestMethod() {
+        Assert.assertFalse(false);
+    }
 }
 
