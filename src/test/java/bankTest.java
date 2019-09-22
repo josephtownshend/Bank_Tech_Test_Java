@@ -15,4 +15,11 @@ public class bankTest {
         bank.deposit(0);
     }
 
+    @Test
+    public void canCheckBalance() {
+        Bank bank = new Bank();
+        bank.deposit(10);
+        assertThat(bank.balance(), is(10));
+    }
+
 }
