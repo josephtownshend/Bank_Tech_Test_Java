@@ -18,9 +18,9 @@ public class Bank {
         System.out.println(transactionHistory);
     }
 
-    public void debit(int fundsWithdrawn) {
-        balance -= fundsWithdrawn;
-        creditTransaction(fundsWithdrawn);
+    public void debit(int fundsDebited) {
+        balance -= fundsDebited;
+        creditTransaction(fundsDebited);
 
         System.out.println(transactionHistory);
     }
@@ -32,9 +32,9 @@ public class Bank {
         transactionHistory.add(newTransaction);
     }
 
-    public void creditTransaction(int fundsWithdrawn) {
+    public void creditTransaction(int fundsDebited) {
         ArrayList<Integer> newTransaction = new ArrayList<Integer>(0);
-        newTransaction.add(fundsWithdrawn);
+        newTransaction.add(fundsDebited);
         newTransaction.add(balance);
         transactionHistory.add(newTransaction);
     }
