@@ -25,14 +25,14 @@ public class Bank {
         System.out.println(transactionHistory);
     }
 
-    public void debitTransaction(int fundsDebited) {
+    private void debitTransaction(int fundsDebited) {
         ArrayList<Integer> newTransaction = new ArrayList<Integer>(0);
         newTransaction.add(fundsDebited);
         newTransaction.add(balance);
         transactionHistory.add(newTransaction);
     }
 
-    public void creditTransaction(int fundsCredited) {
+    private void creditTransaction(int fundsCredited) {
         ArrayList<Integer> newTransaction = new ArrayList<Integer>(0);
         newTransaction.add(fundsCredited);
         newTransaction.add(balance);
