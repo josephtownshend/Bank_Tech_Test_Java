@@ -11,7 +11,7 @@ public class Bank {
         return balance;
     }
 
-    public void deposit(int fundsDeposited) {
+    public void credit(int fundsDeposited) {
         balance += fundsDeposited;
         debitTransaction(fundsDeposited);
 

@@ -25,13 +25,13 @@ public class bankTest {
 
     @Test
     public void canCheckBalance() {
-        bank.deposit(15);
+        bank.credit(15);
         assertThat(bank.balance(), is(15));
     }
 
     @Test
     public void canDepositFunds() {
-        bank.deposit(10);
+        bank.credit(10);
     }
 
     @Test
