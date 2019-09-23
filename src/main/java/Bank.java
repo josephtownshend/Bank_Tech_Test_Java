@@ -21,6 +21,10 @@ public class Bank {
 
     public void withdraw(int fundsWithdrawn) {
         balance -= fundsWithdrawn;
+        transactionHistory.add(fundsWithdrawn);
+        transactionHistory.add(balance);
+
+        System.out.println(transactionHistory);
     }
 
 
