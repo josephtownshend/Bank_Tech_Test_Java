@@ -19,21 +19,20 @@ public class bankTest {
     }
 
     @Test
+    public void canCheckBalance() {
+        bank.deposit(15);
+        assertThat(bank.balance(), is(15));
+    }
+
+    @Test
     public void canDepositFunds() {
         bank.deposit(10);
     }
 
     @Test
     public void canWithdrawFunds() {
-        bank.deposit(20);
         bank.withdraw(10);
-        assertThat(bank.balance(), is(10));
-    }
-
-    @Test
-    public void canCheckBalance() {
-        bank.deposit(10);
-        assertThat(bank.balance(), is(10));
+        assertThat(bank.balance(), is(-10));
     }
 
 }
