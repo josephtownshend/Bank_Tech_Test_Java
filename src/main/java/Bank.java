@@ -18,7 +18,7 @@ public class Bank {
         System.out.println(transactionHistory);
     }
 
-    public void withdraw(int fundsWithdrawn) {
+    public void debit(int fundsWithdrawn) {
         balance -= fundsWithdrawn;
         creditTransaction(fundsWithdrawn);
 

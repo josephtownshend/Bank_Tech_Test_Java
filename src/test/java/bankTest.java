@@ -36,7 +36,7 @@ public class bankTest {
 
     @Test
     public void canWithdrawFunds() {
-        bank.withdraw(10);
+        bank.debit(10);
         assertThat(bank.balance(), is(-10));
     }
 
