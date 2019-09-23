@@ -5,7 +5,7 @@ public class Bank {
 
     private int balance = 0;
 
-    ArrayList<Integer> transactionHistory = new ArrayList<Integer>(0);
+    ArrayList<ArrayList> transactionHistory = new ArrayList<ArrayList>(0);
 
     public int balance() {
         return balance;
@@ -13,19 +13,23 @@ public class Bank {
 
     public void deposit(int fundsDeposited) {
         balance += fundsDeposited;
-        transactionHistory.add(fundsDeposited);
-        transactionHistory.add(balance);
+        debitTransaction(fundsDeposited);
 
         System.out.println(transactionHistory);
     }
 
     public void withdraw(int fundsWithdrawn) {
         balance -= fundsWithdrawn;
-        transactionHistory.add(fundsWithdrawn);
-        transactionHistory.add(balance);
 
         System.out.println(transactionHistory);
     }
 
+    public void debitTransaction(int fundsDeposited) {
+        ArrayList<Integer> newTransaction = new ArrayList<Integer>(0);
+        newTransaction.add(fundsDeposited);
+        newTransaction.add(balance);
+        transactionHistory.add(newTransaction);
+
+    }
 
 }
