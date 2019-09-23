@@ -20,6 +20,7 @@ public class Bank {
 
     public void withdraw(int fundsWithdrawn) {
         balance -= fundsWithdrawn;
+        creditTransaction(fundsWithdrawn);
 
         System.out.println(transactionHistory);
     }
@@ -29,7 +30,13 @@ public class Bank {
         newTransaction.add(fundsDeposited);
         newTransaction.add(balance);
         transactionHistory.add(newTransaction);
+    }
 
+    public void creditTransaction(int fundsWithdrawn) {
+        ArrayList<Integer> newTransaction = new ArrayList<Integer>(0);
+        newTransaction.add(fundsWithdrawn);
+        newTransaction.add(balance);
+        transactionHistory.add(newTransaction);
     }
 
 }
