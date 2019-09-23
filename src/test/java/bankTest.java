@@ -19,6 +19,11 @@ public class bankTest {
     }
 
     @Test
+    public void balanceShouldStartAtZero() {
+        assertThat(bank.balance(), is (0));
+    }
+
+    @Test
     public void canCheckBalance() {
         bank.deposit(15);
         assertThat(bank.balance(), is(15));
